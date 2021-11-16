@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao tac voi mang</title>
+    <script>
+        let x = 0;
+        let array = Array();
+        function add_element_to_array() {
+            array[x] = document.getElementById("textValue").value;
+            alert("Phan tu: " + array[x] + " Duoc them vao vi tri " + x);            x++
+            document.getElementById('textValue').value="";
+        }
+        function display_array() {
+            let e = "<hr/>";
+            for (i = 0; i < array.length;i++) {
+                e += "Phan tu " + i + " = " + array[i] + "<br/>";
+            }
+            document.getElementById("result").innerHTML = e;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="textValue">
+    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();">
+    <input type="button" id="btnDisplay" value="Display" onclick="display_array();">
+    <div id="result"></div>
+</body>
+</html>
